@@ -67,8 +67,8 @@ def parse_color(color_str):
 
 def main():
     parser = argparse.ArgumentParser(description="Extract individual sprites from a PNG spritesheet with transparency.")
-    parser.add_argument("image", help="Path to the spritesheet image")
-    parser.add_argument("output", help="Output folder to save the individual sprites")
+    parser.add_argument("--image", help="Path to the spritesheet image", default="spritesheet.png")
+    parser.add_argument("--output", help="Output folder to save the individual sprites", default="output")
     parser.add_argument("--bg", help="Background color (e.g., '#ffffff' or '255,255,255') to replace transparency", default=None)
     parser.add_argument("--format", help="Output format: png (default) or jpg", choices=["png", "jpg"], default="png")
 
